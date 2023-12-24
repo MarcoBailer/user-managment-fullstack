@@ -15,6 +15,7 @@ export const getSession = () => {
   return localStorage.getItem("accessToken");
 };
 
+// Definindo as constantes que representam os diferentes papéis de acesso
 export const allAccessRoles = [
   RolesEnum.OWNER,
   RolesEnum.ADMIN,
@@ -29,7 +30,7 @@ export const managerAccessRoles = [
 export const adminAccessRoles = [RolesEnum.OWNER, RolesEnum.ADMIN];
 export const ownerAccessRoles = [RolesEnum.OWNER];
 
-//Wich roles can be updated by the logged in user
+// Definindo a função allowedRolesForUpdateArray que retorna os papéis que o usuário logado pode atualizar
 export const allowedRolesForUpdateArray = (
   loggedInUser?: IAuthUser
 ): string[] => {
@@ -41,6 +42,7 @@ export const allowedRolesForUpdateArray = (
 //owner cannot change owner role
 //admin cannot change owner role neither admin role
 
+// Definindo a função isAuthorizedForUpdateRole que verifica se o usuário logado tem permissão para atualizar o papel do usuário selecionado
 export const isAuthorizedForUpdateRole = (
   loggedInUserRole: string,
   selectedUserRole: string
@@ -60,3 +62,8 @@ export const isAuthorizedForUpdateRole = (
   }
   return result;
 };
+
+// Este arquivo define várias constantes e funções relacionadas à autorização de usuários com base em seus papéis.
+//  A função allowedRolesForUpdateArray retorna os papéis que o usuário logado pode atualizar, enquanto a função isAuthorizedForUpdateRole 
+//  verifica se o usuário logado tem permissão para atualizar o papel do usuário selecionado.
+//  As constantes allAccessRoles, adminAccessRoles e ownerAccessRoles definem os papéis que têm acesso a diferentes níveis de autorização.

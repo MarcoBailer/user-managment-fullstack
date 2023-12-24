@@ -12,3 +12,7 @@ const AuthSpinner = () => {
 };
 
 export default AuthSpinner;
+
+// Este é um componente de spinner de autenticação que exibe um ícone PiDetective girando.
+//  Ele usa classes Tailwind CSS para estilização e animação. 
+// O spinner é criado usando um div com uma borda animada.

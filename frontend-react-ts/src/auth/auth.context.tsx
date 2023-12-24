@@ -167,3 +167,31 @@ const AuthContextProvider = ({ children }: IProps) => {
 };
 
 export default AuthContextProvider;
+
+
+// Este é um arquivo auth.context.tsx que define um contexto de autenticação para um aplicativo React. 
+//Ele usa o hook useReducer para gerenciar o estado de autenticação e fornece funções para login, logout e registro :
+
+//1 Importa os módulos necessários e tipos de auth.types.
+
+//2 Define uma função authReducer que manipula ações de LOGIN e LOGOUT.
+
+//3 Define um estado inicial para o hook useReducer.
+
+//4 Cria o AuthContext usando createContext.
+
+//5 Define uma interface IProps para os props do componente AuthContextProvider.
+
+//6 Define o componente AuthContextProvider que usa useReducer para gerenciar o estado de autenticação.
+
+//7 Dentro do AuthContextProvider, define uma função initializeAuthContext que verifica se o usuário está autenticado no início.
+
+//8 Usa o hook useEffect para chamar initializeAuthContext quando o componente é montado.
+
+//9 Define funções register, login e logout que fazem chamadas de API para registrar, fazer login e logout, respectivamente.
+
+//10 Define um objeto valuesObject que contém o estado de autenticação e as funções de autenticação.
+
+//11 Retorna um AuthContext.Provider que passa valuesObject como o valor do contexto.
+
+//12 Exporta AuthContextProvider como o export padrão.
