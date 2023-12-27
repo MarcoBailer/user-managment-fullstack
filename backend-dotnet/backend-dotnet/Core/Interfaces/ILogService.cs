@@ -1,4 +1,4 @@
-﻿using backend_dotnet.Core.Dtos.Log;
+﻿using backend_dotnet7.Core.Dtos.Log;
 using System.Security.Claims;
 
 namespace backend_dotnet.Core.Interfaces
