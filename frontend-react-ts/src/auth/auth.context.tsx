@@ -7,7 +7,7 @@ import {
 } from "react";
 import {
   IAuthContext,
-  IAuthContexAction,
+  IAuthContextAction,
   IAuthContextActionTypes,
   IAuthContextState,
   ILoginResponseDto,
@@ -27,7 +27,7 @@ import {
 
 // we need a reducer fuction for userReducer hook
 
-const authReducer = (state: IAuthContextState, action: IAuthContexAction) => {
+const authReducer = (state: IAuthContextState, action: IAuthContextAction) => {
   if (action.type === IAuthContextActionTypes.LOGIN) {
     return {
       ...state,
@@ -105,12 +105,14 @@ const AuthContextProvider = ({ children }: IProps) => {
     initializeAuthContext()
       .then(() => console.log("initializeAuthContext was successfull"))
       .catch((error) => console.log(error));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   //register method
   const register = useCallback(
     async (
       firstName: string,
       lastName: string,
+      userName: string,
       email: string,
       password: string,
       address: string
@@ -118,14 +120,16 @@ const AuthContextProvider = ({ children }: IProps) => {
       const response = await axiosInstance.post(REGISTER_URL, {
         firstName,
         lastName,
+        userName,
         email,
         password,
         address,
       });
       console.log("Register result", response);
-      toast.success("Register was successfull.Please login");
+      toast.success("Register was successfull. Please login");
       navigate(PATH_AFTER_REGISTER);
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     []
   );
   //login method
@@ -143,6 +147,7 @@ const AuthContextProvider = ({ children }: IProps) => {
       payload: userInfo,
     });
     navigate(PATH_AFTER_LOGIN);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   //logout method
   const logout = useCallback(() => {
@@ -151,6 +156,7 @@ const AuthContextProvider = ({ children }: IProps) => {
       type: IAuthContextActionTypes.LOGOUT,
     });
     navigate(PATH_AFTER_LOGOUT);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   //create an object for values of context provider
   const valuesObject = {

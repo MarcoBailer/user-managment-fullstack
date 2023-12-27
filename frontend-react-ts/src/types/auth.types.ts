@@ -69,7 +69,7 @@ export enum IAuthContextActionTypes {
 // Ela tem duas propriedades: type e payload.
 // type é do tipo IAuthContextActionTypes e representa o tipo da ação.
 // payload é um objeto do tipo IAuthUser que representa o usuário autenticado. Esta propriedade é opcional.
-export interface IAuthContexAction {
+export interface IAuthContextAction {
   type: IAuthContextActionTypes;
   payload?: IAuthUser;
 }

@@ -64,7 +64,7 @@ const Header = () => {
       <div>
         {
             isAuthenticated ? (
-                <div className="flex-center gap-2">
+                <div className="flex items-center gap-2">
                     <Button
                         label='Dashboard'
                         onClick={() => navigate(PATH_DASHBOARD.dashboard)}
