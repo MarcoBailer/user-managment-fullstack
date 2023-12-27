@@ -4,7 +4,7 @@ import { PATH_DASHBOARD, PATH_PUBLIC } from "../routes/paths";
 
 // A constante HOST_API_KEY é a URL base para todas as solicitações de API que serão feitas.
 // Neste caso, o servidor está rodando localmente na porta 7237.
-export const HOST_API_KEY = 'http://localhost:7237/api';
+export const HOST_API_KEY = 'https://localhost:7253/api';
 
 // As constantes a seguir são os caminhos específicos para várias funcionalidades da API.
 // Cada uma dessas constantes será anexada à HOST_API_KEY para formar a URL completa para a solicitação de API.

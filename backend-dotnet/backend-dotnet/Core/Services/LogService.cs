@@ -1,7 +1,7 @@
 ﻿using backend_dotnet.Core.DbContext;
-using backend_dotnet.Core.Dtos.Log;
 using backend_dotnet.Core.Entities;
 using backend_dotnet.Core.Interfaces;
+using backend_dotnet7.Core.Dtos.Log;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
@@ -33,7 +33,7 @@ namespace backend_dotnet.Core.Services
                 {
                     CreatedAt = q.CreatedAt,
                     Description = q.Description,
-                    Username = q.UserName
+                    UserName = q.UserName
                 })
                 .OrderByDescending(q => q.CreatedAt)
                 .ToListAsync();
@@ -48,7 +48,7 @@ namespace backend_dotnet.Core.Services
                 {
                     CreatedAt = q.CreatedAt,
                     Description = q.Description,
-                    Username = q.UserName
+                    UserName = q.UserName
                 })
                 .OrderByDescending(q => q.CreatedAt)
                 .ToListAsync();

@@ -1,6 +1,6 @@
 ﻿using backend_dotnet.Core.Constants;
-using backend_dotnet.Core.Dtos.Log;
 using backend_dotnet.Core.Interfaces;
+using backend_dotnet7.Core.Dtos.Log;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
